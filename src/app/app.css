@@ -1,0 +1,47 @@
+.social-icons {
+  position: fixed;
+  top: 40%;
+  right: 10px; /* los pone a la izquierda */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+  color: #fff;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.social-icons a.whatsapp { background: #25D366; }
+.social-icons a.facebook { background: #1877f2; }
+.social-icons a.tiktok { background: #000000; }
+.social-icons a.instagram { 
+  background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5); 
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+.custom-navbar {
+  background: linear-gradient(90deg, #094faa, #6259b6); /* degradado púrpura */
+}
+
+
+footer {
+  background-color: #004AAD; /* Azul personalizado */
+}
+
+
+
+
+

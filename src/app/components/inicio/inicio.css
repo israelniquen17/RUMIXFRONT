@@ -1,0 +1,23 @@
+.carousel-item img {
+  height: 500px;        /* Altura fija para todas las imágenes */
+  object-fit: cover;    /* Recorta la imagen manteniendo proporciones */
+  width: 100%;          /* Que siempre ocupe todo el ancho */
+}
+
+
+footer {
+  background-color: #004AAD; /* Azul personalizado */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
