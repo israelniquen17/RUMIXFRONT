@@ -32,22 +32,38 @@
 .social-icons a:hover {
   transform: scale(1.2);
 }
-.custom-navbar {
-  background: linear-gradient(90deg, #094faa, #6259b6); /* degradado púrpura */
-}
 
+
+.custom-navbar {
+background: linear-gradient(90deg, #094faa, #6259b6);
+padding-top: 5px !important; 
+padding-bottom: 5px !important; 
+}
 
 footer {
   background-color: #004AAD; /* Azul personalizado */
 }
 
 
+.navbar-nav .nav-item {
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 
-/* Aumenta el tamaño de la letra de todos los enlaces de navegación */
+/* 2. Ajusta el padding de los enlaces (<a>) para controlar la separación */
 .navbar-nav .nav-link {
-    font-size: 1.3rem; /* Aumenta la fuente para Inicio, Productos y el título del Catálogo */
-    padding-left: 15px !important; /* Asegura un buen espaciado entre enlaces */
-    padding-right: 15px !important; 
+    font-size: 1.3rem; 
+    
+    /* ⚠️ AJUSTE CRUCIAL: Aumentamos a 10px. 5px es demasiado ajustado y causa conflictos. */
+    padding-left: 10px !important; 
+    padding-right: 10px !important; 
+}
+
+/* Aumenta el tamaño de la letra de los enlaces DENTRO del menú desplegable */
+.dropdown-menu .dropdown-item {
+    font-size: 1.1rem;
+    padding: 8px 20px;
 }
 
 /* Aumenta el tamaño de la letra de los enlaces DENTRO del menú desplegable */

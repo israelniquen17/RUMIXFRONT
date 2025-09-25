@@ -1,18 +1,20 @@
 /* ========================================================================= */
-/* 1. ESTILOS DEL CARRUSEL (Altura Fija y Responsive)                        */
+/* 1. ESTILOS DEL CARRUSEL: Altura Fija y Responsive */
 /* ========================================================================= */
 
 .carousel-item img {
-    /* Altura Fija para ESCRITORIO */
+    /* Altura estándar para pantallas grandes (Escritorio/Tablet) */
     height: 500px; 
+    
+    /* CLAVE: Asegura que la imagen cubra el área sin deformarse */
     object-fit: cover; 
     width: 100%; 
 }
 
-/* MEDIA QUERY: Móviles pequeños (hasta 576px) */
-@media (max-width: 576px) {
+/* MEDIA QUERY: Móviles (hasta 767.98px) */
+@media (max-width: 767.98px) {
     .carousel-item img {
-        /* Altura reducida para que se vea bien en celulares (40% de la altura de la pantalla) */
+        /* CORRECCIÓN: Altura reducida a 40% de la altura de la pantalla (vh) para móvil */
         height: 40vh !important; 
     }
 }
@@ -22,17 +24,16 @@
      .carousel-item img {
         /* Altura intermedia para tablets */
         height: 60vh; 
-    }
+     }
 }
 
 /* ========================================================================= */
-/* 2. ESTILOS DE GALERÍA DE PRODUCTOS (IGUAL TAMAÑO)                         */
+/* 2. ESTILOS DE GALERÍA DE PRODUCTOS (IGUAL TAMAÑO) */
 /* ========================================================================= */
 
 #productos .img-fluid {
-    /* ⚠️ AJUSTE CLAVE: Altura fija para todas las imágenes de la galería */
+    /* AJUSTE CLAVE: Altura fija y object-fit para la galería */
     height: 300px; 
-    /* Esta propiedad es VITAL para evitar deformaciones y mantener el mismo tamaño visual */
     object-fit: cover;
     
     transition: transform 0.4s ease, filter 0.4s ease; /* Transición para el hover */
@@ -45,7 +46,7 @@
 }
 
 /* ========================================================================= */
-/* 3. ESTILOS DE TESTIMONIOS Y BENEFICIOS                                    */
+/* 3. ESTILOS DE TESTIMONIOS Y BENEFICIOS */
 /* ========================================================================= */
 
 /* Estilo para las tarjetas de testimonio */
@@ -72,4 +73,5 @@
     .col-md-3 i {
         font-size: 2rem !important; 
     }
+    /* ⚠️ Se quita el texto en la media query ya que estaba rompiendo el CSS */
 }
