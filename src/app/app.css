@@ -43,5 +43,15 @@ footer {
 
 
 
+/* Aumenta el tamaño de la letra de todos los enlaces de navegación */
+.navbar-nav .nav-link {
+    font-size: 1.3rem; /* Aumenta la fuente para Inicio, Productos y el título del Catálogo */
+    padding-left: 15px !important; /* Asegura un buen espaciado entre enlaces */
+    padding-right: 15px !important; 
+}
 
-
+/* Aumenta el tamaño de la letra de los enlaces DENTRO del menú desplegable */
+.dropdown-menu .dropdown-item {
+    font-size: 1.1rem; /* Mismo tamaño para los ítems "Ver" y "Descargar" */
+    padding: 8px 20px;
+}

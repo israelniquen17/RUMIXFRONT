@@ -1,77 +1,256 @@
+/* ========================================================================= */
+/* 1. ESTILOS DE PRODUCTOS Y CARDS (Asegurando estabilidad)                  */
+/* ========================================================================= */
+
 /* Contenedor principal */
 .productos-container {
-  padding: 40px;
-  text-align: center;
-  background: #f9f9f9;
-  min-height: 100vh;
+    padding: 40px;
+    text-align: center;
+    background: #f9f9f9;
+    min-height: 100vh;
 }
 
 /* Título */
 .productos-title {
-  font-size: 2.2rem;
-  margin-bottom: 30px;
-  font-weight: bold;
-  color: #004aad;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #004aad;
 }
 
 /* Grid de productos */
 .productos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: grid;
+    /* Mantiene las columnas estables para escritorio */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Card individual */
 .producto-card {
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .producto-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Imagen */
+/* Imagen de la Card (Ajuste crucial para estabilidad en todos los tamaños) */
 .producto-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+    width: 100%;
+    /* Altura fija para la imagen de la tarjeta */
+    height: 200px; 
+    /* Esta propiedad es VITAL para evitar deformaciones */
+    object-fit: cover;
 }
 
 /* Info del producto */
 .producto-info {
-  padding: 20px;
+    padding: 20px;
 }
 
 .producto-info h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .producto-info p {
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
 }
 
-/* Botón */
+/* Botón (Unificado) */
 .btn-comprar {
-  background: #004aad;
-  color: #fff;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+    padding: 10px 18px;
+    background: #004aad; /* Color principal de la marca */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .btn-comprar:hover {
-  background: #00337a;
+    background: #00337a;
+}
+
+/* ========================================================================= */
+/* 2. ESTILOS DEL CARRUSEL (Ajuste de Altura Responsive)                     */
+/* ========================================================================= */
+
+.carousel-item img {
+    /* Altura para ESCRITORIO */
+    height: 500px;
+    width: 100%; 
+    object-fit: cover; 
+}
+
+/* MEDIA QUERY: Reduce la altura del carrusel en dispositivos móviles */
+@media (max-width: 768px) {
+    .carousel-item img {
+        /* Altura reducida para que se vea bien en celulares (ej: 40% de la altura de la pantalla) */
+        height: 40vh; 
+    }
+}
+
+
+/* ========================================================================= */
+/* 3. ESTILOS MODAL (Dos Columnas y Responsividad)                          */
+/* ========================================================================= */
+
+/* Estilo para el fondo oscuro (backdrop) */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1040; 
+}
+
+/* Estilo para la ventana modal principal */
+.modal-custom {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: white; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    z-index: 1050; 
+    width: 90%;
+    max-width: 800px;
+    animation: fadeIn 0.3s ease-out; 
+    max-height: 90vh; 
+    overflow-y: auto; 
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #888;
+    line-height: 1; 
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: #555;
+}
+
+/* Estructura de dos columnas */
+.modal-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 2 Columnas para escritorio */
+    gap: 30px; 
+    align-items: start; 
+}
+
+.modal-image-col {
+    text-align: center;
+}
+
+.modal-product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Puedes dejarlo en 'height: auto;' o poner una altura fija si deseas: */
+    /* height: 250px; object-fit: cover; */
+}
+
+.modal-specs-col h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.modal-specs-col p {
+    margin-bottom: 12px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.modal-specs-col .btn-comprar {
+    margin-top: 20px;
+    width: auto;
+    display: inline-block;
+}
+
+/* MEDIA QUERY: Adaptación de Modal a Móviles */
+@media (max-width: 768px) {
+    .modal-content-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+        gap: 20px;
+    }
+    .modal-image-col {
+        margin-bottom: 15px;
+    }
+    .modal-custom {
+        padding: 20px;
+    }
+    .modal-header h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Estilos de Testimonios y Galería (Manteniendo los que ya tenías) */
+.testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    border: 1px solid #e0f7fa; 
+}
+
+.testimonial-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+#productos .img-fluid {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+#productos .img-fluid:hover {
+    transform: scale(1.05); 
+    filter: brightness(0.8); 
+    cursor: pointer;
+}
+
+.col-md-3 i {
+    color: #00bcd4 !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

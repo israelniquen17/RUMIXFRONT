@@ -1,23 +1,75 @@
+/* ========================================================================= */
+/* 1. ESTILOS DEL CARRUSEL (Altura Fija y Responsive)                        */
+/* ========================================================================= */
+
 .carousel-item img {
-  height: 500px;        /* Altura fija para todas las imágenes */
-  object-fit: cover;    /* Recorta la imagen manteniendo proporciones */
-  width: 100%;          /* Que siempre ocupe todo el ancho */
+    /* Altura Fija para ESCRITORIO */
+    height: 500px; 
+    object-fit: cover; 
+    width: 100%; 
 }
 
-
-footer {
-  background-color: #004AAD; /* Azul personalizado */
+/* MEDIA QUERY: Móviles pequeños (hasta 576px) */
+@media (max-width: 576px) {
+    .carousel-item img {
+        /* Altura reducida para que se vea bien en celulares (40% de la altura de la pantalla) */
+        height: 40vh !important; 
+    }
 }
 
+/* MEDIA QUERY: Tablets y dispositivos medianos (577px a 991.98px) */
+@media (min-width: 577px) and (max-width: 991.98px) {
+     .carousel-item img {
+        /* Altura intermedia para tablets */
+        height: 60vh; 
+    }
+}
 
+/* ========================================================================= */
+/* 2. ESTILOS DE GALERÍA DE PRODUCTOS (IGUAL TAMAÑO)                         */
+/* ========================================================================= */
 
+#productos .img-fluid {
+    /* ⚠️ AJUSTE CLAVE: Altura fija para todas las imágenes de la galería */
+    height: 300px; 
+    /* Esta propiedad es VITAL para evitar deformaciones y mantener el mismo tamaño visual */
+    object-fit: cover;
+    
+    transition: transform 0.4s ease, filter 0.4s ease; /* Transición para el hover */
+}
 
+#productos .img-fluid:hover {
+    transform: scale(1.05); /* Ligeramente más grande */
+    filter: brightness(0.8); /* Oscurecer un poco */
+    cursor: pointer;
+}
 
+/* ========================================================================= */
+/* 3. ESTILOS DE TESTIMONIOS Y BENEFICIOS                                    */
+/* ========================================================================= */
 
+/* Estilo para las tarjetas de testimonio */
+.testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    border: 1px solid #e0f7fa; 
+}
 
+.testimonial-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
 
+/* Estilo para los iconos de beneficios (ejemplo de color secundario) */
+.col-md-3 i {
+    color: #00bcd4 !important; /* Un azul cian vibrante */
+}
 
-
-
-
-
+/* MEDIA QUERY: Ajustes generales para móvil (Íconos de Beneficios) */
+@media (max-width: 767.98px) {
+    /* Reduce el tamaño de los íconos de Beneficios en móvil */
+    .col-md-3 i {
+        font-size: 2rem !important; 
+    }
+}

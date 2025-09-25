@@ -1,0 +1,58 @@
+/* Estilos Específicos para la Sección Sobre Nosotros */
+
+#sobre-nosotros {
+    background-color: #fcfcfc; /* Fondo casi blanco para que resalte */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Título principal con color de marca */
+.text-primary-custom {
+    color: #004AAD !important;
+}
+
+/* Botón personalizado con color de marca */
+.btn-info-custom {
+    background-color: #00bcd4; /* Azul cian vibrante (usado en íconos) */
+    border-color: #00bcd4;
+    color: white;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 50px; /* Borde redondeado */
+    transition: background-color 0.3s ease;
+}
+
+.btn-info-custom:hover {
+    background-color: #0097a7; /* Color más oscuro al pasar el ratón */
+    border-color: #0097a7;
+}
+
+/* Estilo para la imagen del sobre nosotros */
+.about-image {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+    /* Sombras suaves para el efecto 3D */
+    box-shadow: 0 10px 30px rgba(0, 74, 173, 0.1); 
+    /* Borde suave en la imagen */
+    border: 5px solid white; 
+}
+
+/* Estilo para los iconos de la Promesa */
+.icon-custom {
+    color: #004AAD; /* Color principal para los íconos */
+    transition: color 0.3s ease;
+}
+
+.col-md-4:hover .icon-custom {
+    color: #00bcd4; /* Cambia a cian vibrante al pasar el ratón */
+    transform: translateY(-3px);
+}
+
+/* Línea divisora */
+.divider-custom {
+    border-top: 3px solid #004AAD;
+    opacity: 0.1;
+    max-width: 80%;
+    margin: 0 auto;
+}

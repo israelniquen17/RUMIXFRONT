@@ -2,87 +2,44 @@
   <h2 class="productos-title">Nuestros Productos</h2>
 
   <div class="productos-grid">
-    <!-- Card 1 -->
-    <div class="producto-card">
-      <a href="https://ibb.co/B2pkbJgL"><img src="https://i.ibb.co/k27ZjThK/morral.jpg" alt="morral" border="0"></a>
+    <div class="producto-card" *ngFor="let producto of productos">
+      <a [href]="producto.imagenUrl"><img [src]="producto.imagenUrl" [alt]="producto.imagenAlt" border="0"></a>
       <div class="producto-info">
-        <h3>Producto 1</h3>
-        <p>Descripción breve del producto, resaltando sus beneficios.</p>
-        <button class="btn-comprar">Comprar</button>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="producto-card">
-      <a href="https://ibb.co/5hxGvY5v"><img src="https://i.ibb.co/gZFmwvDw/mochila.jpg" alt="mochila" border="0"></a>
-      <div class="producto-info">
-        <h3>Producto 2</h3>
-        <p>Descripción breve del producto, resaltando sus beneficios.</p>
-        <button class="btn-comprar">Comprar</button>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="producto-card">
-      <a href="https://ibb.co/ZRmNBdww"><img src="https://i.ibb.co/bjJ7s1yy/mochila-bolsillo.jpg" alt="mochila-bolsillo" border="0"></a>
-      <div class="producto-info">
-        <h3>Mochila con Bolsillo</h3>
-        <p>Mochila pequeña con bolsillo transparante con diseño personzalizado.</p>
-        <button class="btn-comprar">Ver Especificaciones</button>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="producto-card">
-        <a href="https://ibb.co/xcCY23r"><img src="https://i.ibb.co/rL73QvX/Cartuchera.jpg" alt="Cartuchera" border="0"></a>
-        <div class="producto-info">
-        <h3>Producto 4</h3>
-        <p>Descripción breve del producto, resaltando sus beneficios.</p>
-        <button class="btn-comprar">Comprar</button>
+        <h3>{{ producto.nombre }}</h3>
+        <p>{{ producto.descripcion }}</p>
+        
+        <button class="btn-comprar" (click)="abrirModalEspecificaciones(producto)">Ver Especificaciones</button>
       </div>
     </div>
   </div>
   
-   <div class="productos-grid mt-5">
-    <!-- Card 1 -->
-    <div class="producto-card">
-      <a href="https://ibb.co/B2pkbJgL"><img src="https://i.ibb.co/k27ZjThK/morral.jpg" alt="morral" border="0"></a>
-      <div class="producto-info">
-        <h3>Producto 1</h3>
-        <p>Descripción breve del producto, resaltando sus beneficios.</p>
-        <button class="btn-comprar">Comprar</button>
+  <ng-container *ngIf="productoSeleccionado">
+    
+    <div class="modal-backdrop" (click)="cerrarModal()"></div>
+    
+    <div class="modal-custom">
+      <div class="modal-header">
+        <h2>Especificaciones de: {{ productoSeleccionado.nombre }}</h2>
+        <button class="modal-close" (click)="cerrarModal()">×</button>
       </div>
-    </div>
+      
+      <div class="modal-body">
+        <div class="modal-content-grid">
+          
+          <div class="modal-image-col">
+            <img [src]="productoSeleccionado.imagenUrl" [alt]="productoSeleccionado.imagenAlt" class="modal-product-image">
+          </div>
 
-    <!-- Card 2 -->
-    <div class="producto-card">
-      <a href="https://ibb.co/5hxGvY5v"><img src="https://i.ibb.co/gZFmwvDw/mochila.jpg" alt="mochila" border="0"></a>
-      <div class="producto-info">
-        <h3>Producto 2</h3>
-        <p>Descripción breve del producto, resaltando sus beneficios.</p>
-        <button class="btn-comprar">Comprar</button>
+          <div class="modal-specs-col">
+            <h3>Detalles</h3>
+            
+            <p *ngFor="let spec of productoSeleccionado.especificaciones">{{ spec }}</p>
+            
+            <button class="btn-comprar mt-3">Cotizar {{ productoSeleccionado.nombre }}</button>
+          </div>
+        </div>
       </div>
     </div>
+  </ng-container>
 
-    <!-- Card 3 -->
-    <div class="producto-card">
-      <a href="https://ibb.co/ZRmNBdww"><img src="https://i.ibb.co/bjJ7s1yy/mochila-bolsillo.jpg" alt="mochila-bolsillo" border="0"></a>
-      <div class="producto-info">
-        <h3>Producto 3</h3>
-        <p>Descripción breve del producto, resaltando sus beneficios.</p>
-        <button class="btn-comprar">Comprar</button>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="producto-card">
-        <a href="https://ibb.co/xcCY23r"><img src="https://i.ibb.co/rL73QvX/Cartuchera.jpg" alt="Cartuchera" border="0"></a>
-        <div class="producto-info">
-        <h3>Producto 4</h3>
-        <p>Descripción breve del producto, resaltando sus beneficios.</p>
-        <button class="btn-comprar">Comprar</button>
-      </div>
-    </div>
-  </div>
-  
 </div>
