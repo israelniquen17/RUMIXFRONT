@@ -9,10 +9,13 @@
 
 @media (max-width: 768px) {
   .carousel-inner img {
-    max-height: 55vh;       /* ✅ más alto en móvil */
-    object-fit: contain;    /* ✅ se ajusta completo sin cortar */
+    width: 100% !important;       /* ocupa todo el ancho */
+    height: auto !important;      /* mantiene proporción */
+    max-height: 100vh !important; /* 🔹 ocupa toda la altura del móvil */
+    object-fit: contain !important; /* muestra toda la imagen sin recortar */
   }
 }
+
 
 
 /* ========================================================================= */
