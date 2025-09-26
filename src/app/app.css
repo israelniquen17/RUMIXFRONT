@@ -1,7 +1,10 @@
+/* ========================= */
+/* 🔹 ICONOS SOCIALES LATERALES */
+/* ========================= */
 .social-icons {
   position: fixed;
   top: 40%;
-  right: 10px; /* los pone a la izquierda */
+  right: 10px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -9,15 +12,15 @@
 }
 
 .social-icons a {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   background: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 20px;
   color: #fff;
   transition: transform 0.3s, background 0.3s;
 }
@@ -33,41 +36,94 @@
   transform: scale(1.2);
 }
 
-
+/* ========================= */
+/* 🔹 NAVBAR GENERAL */
+/* ========================= */
 .custom-navbar {
-background: linear-gradient(90deg, #094faa, #6259b6);
-padding-top: 5px !important; 
-padding-bottom: 5px !important; 
+  background: linear-gradient(90deg, #094faa, #6259b6);
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
 }
 
+/* ========================= */
+/* 🔹 FOOTER */
+/* ========================= */
 footer {
   background-color: #004AAD; /* Azul personalizado */
+  color: #fff;
 }
 
+/* ========================= */
+/* 🔹 MODO MÓVIL (<=768px) */
+/* ========================= */
+@media (max-width: 768px) {
+  /* Navbar más delgado */
+  .custom-navbar {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+/* ========================= */
+/* 🔹 MODO MÓVIL (<=768px) */
+/* ========================= */
+@media (max-width: 768px) {
+    /* ... (otras reglas de CSS) ... */
 
-.navbar-nav .nav-item {
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    /* Links más compactos */
+    .navbar-nav .nav-item {
+        /* CAMBIO AQUÍ: Reduce el margen a un valor muy pequeño o a 0 */
+        margin-bottom: 0px !important; /* Estarán lo más pegados posible */
+        /* O podrías probar con 0.5px si quieres una separación mínima: margin-bottom: 0.5px !important; */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.8rem !important;
+        padding: 3px 5px !important;
+        line-height: 1rem !important;
+    }
+
+    /* ... (otras reglas de CSS) ... */
 }
+  /* Logo más pequeño */
+  .custom-navbar img,
+  .navbar-brand img {
+    width: 65px !important;
+    height: auto !important;
+  }
 
-/* 2. Ajusta el padding de los enlaces (<a>) para controlar la separación */
-.navbar-nav .nav-link {
-    font-size: 1.3rem; 
-    
-    /* ⚠️ AJUSTE CRUCIAL: Aumentamos a 10px. 5px es demasiado ajustado y causa conflictos. */
-    padding-left: 10px !important; 
-    padding-right: 10px !important; 
-}
+  /* Botón hamburguesa más chico */
+  .navbar-toggler {
+    padding: 2px 5px !important;
+    font-size: 0.8rem !important;
+  }
 
-/* Aumenta el tamaño de la letra de los enlaces DENTRO del menú desplegable */
-.dropdown-menu .dropdown-item {
-    font-size: 1.1rem;
-    padding: 8px 20px;
-}
+  /* Links más compactos */
+  .navbar-nav .nav-item {
+    margin-bottom: 1px !important;  /* casi pegados */
+  }
 
-/* Aumenta el tamaño de la letra de los enlaces DENTRO del menú desplegable */
-.dropdown-menu .dropdown-item {
-    font-size: 1.1rem; /* Mismo tamaño para los ítems "Ver" y "Descargar" */
-    padding: 8px 20px;
+  .navbar-nav .nav-link {
+    font-size: 0.8rem !important;
+    padding: 3px 5px !important;
+    line-height: 1rem !important;
+  }
+
+  /* Menú colapsado más compacto */
+  .navbar-collapse {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+
+  /* Dropdown más reducido */
+  .dropdown-menu .dropdown-item {
+    font-size: 0.8rem !important;
+    padding: 3px 8px !important;
+    line-height: 1rem !important;
+  }
+
+  /* Íconos sociales más chicos */
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
 }

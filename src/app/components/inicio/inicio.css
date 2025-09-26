@@ -1,55 +1,39 @@
-/* ========================================================================= */
-/* 1. ESTILOS DEL CARRUSEL: Altura Fija y Responsive */
-/* ========================================================================= */
-
-.carousel-item img {
-    /* Altura estándar para pantallas grandes (Escritorio/Tablet) */
-    height: 500px; 
-    
-    /* CLAVE: Asegura que la imagen cubra el área sin deformarse */
-    object-fit: cover; 
-    width: 100%; 
+/* ========================= */
+/* 🔹 CARRUSEL RESPONSIVE */
+/* ========================= */
+.carousel-inner img {
+  width: 100% !important;
+  max-height: 95vh;         /* ✅ más alto en PC (casi toda la pantalla) */
+  object-fit: cover;        /* ✅ recorta sin deformar */
 }
 
-/* MEDIA QUERY: Móviles (hasta 767.98px) */
-@media (max-width: 767.98px) {
-    .carousel-item img {
-        /* CORRECCIÓN: Altura reducida a 40% de la altura de la pantalla (vh) para móvil */
-        height: 40vh !important; 
-    }
+@media (max-width: 768px) {
+  .carousel-inner img {
+    max-height: 55vh;       /* ✅ más alto en móvil */
+    object-fit: contain;    /* ✅ se ajusta completo sin cortar */
+  }
 }
 
-/* MEDIA QUERY: Tablets y dispositivos medianos (577px a 991.98px) */
-@media (min-width: 577px) and (max-width: 991.98px) {
-     .carousel-item img {
-        /* Altura intermedia para tablets */
-        height: 60vh; 
-     }
-}
 
 /* ========================================================================= */
 /* 2. ESTILOS DE GALERÍA DE PRODUCTOS (IGUAL TAMAÑO) */
 /* ========================================================================= */
-
 #productos .img-fluid {
-    /* AJUSTE CLAVE: Altura fija y object-fit para la galería */
-    height: 300px; 
-    object-fit: cover;
-    
-    transition: transform 0.4s ease, filter 0.4s ease; /* Transición para el hover */
+    width: 100%;
+    height: 300px;           /* ✅ altura fija */
+    object-fit: cover;       /* ✅ recorta proporcionalmente */
+    transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 #productos .img-fluid:hover {
-    transform: scale(1.05); /* Ligeramente más grande */
-    filter: brightness(0.8); /* Oscurecer un poco */
+    transform: scale(1.05);
+    filter: brightness(0.8);
     cursor: pointer;
 }
 
 /* ========================================================================= */
 /* 3. ESTILOS DE TESTIMONIOS Y BENEFICIOS */
 /* ========================================================================= */
-
-/* Estilo para las tarjetas de testimonio */
 .testimonial-card {
     background-color: white;
     border-radius: 10px;
@@ -62,16 +46,13 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* Estilo para los iconos de beneficios (ejemplo de color secundario) */
 .col-md-3 i {
-    color: #00bcd4 !important; /* Un azul cian vibrante */
+    color: #00bcd4 !important;
 }
 
-/* MEDIA QUERY: Ajustes generales para móvil (Íconos de Beneficios) */
+/* MEDIA QUERY: Ajustes generales para móvil */
 @media (max-width: 767.98px) {
-    /* Reduce el tamaño de los íconos de Beneficios en móvil */
     .col-md-3 i {
-        font-size: 2rem !important; 
+        font-size: 2rem !important;
     }
-    /* ⚠️ Se quita el texto en la media query ya que estaba rompiendo el CSS */
 }
