@@ -1,9 +1,6 @@
-// productos.component.ts
-
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
-// Define una interfaz para tipar mejor los datos de los productos
 interface Producto {
   id: number;
   nombre: string;
@@ -15,128 +12,125 @@ interface Producto {
 
 @Component({
   selector: 'app-productos',
-  imports: [CommonModule], 
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './productos.html',
-  styleUrl: './productos.css'
+  styleUrls: ['./productos.css']
 })
 export class ProductosComponent {
-  // Inicializamos la variable como null. Será null si el modal está cerrado.
-  productoSeleccionado: Producto | null = null; 
+  productoSeleccionado: Producto | null = null;
 
-  // Definición de todos tus productos
   productos: Producto[] = [
     {
       id: 1,
-      nombre: 'Morral Clásico',
-      descripcion: 'Un morral práctico y elegante para el día a día.',
-      imagenUrl: 'https://i.ibb.co/k27ZjThK/morral.jpg',
-      imagenAlt: 'morral',
+      nombre: 'Cilindro Deportivo',
+      descripcion: 'Bolso cilíndrico ideal para gimnasio o viajes cortos.',
+      imagenUrl: 'https://i.ibb.co/cn1mBdy/Barril.jpg',
+      imagenAlt: 'Cilindro deportivo',
       especificaciones: [
-        'Material: Lona de alta resistencia.',
-        'Dimensiones: 35cm x 28cm x 12cm.',
-        'Características: Correa ajustable, dos bolsillos exteriores, compartimento interno acolchado.',
-        'Detalle: Ideal para tablets o libros. Cierre de hebilla de seguridad.'
+        'Material: Lona impermeable reforzada.',
+        'Dimensiones: 45cm x 25cm x 25cm.',
+        'Características: Correa ajustable, bolsillo lateral con cierre, base antideslizante.',
+        'Detalle: Ideal para ropa deportiva o accesorios de entrenamiento.'
       ]
     },
     {
       id: 2,
-      nombre: 'Mochila Urbana',
-      descripcion: 'Mochila moderna con gran capacidad y diseño minimalista.',
-      imagenUrl: 'https://i.ibb.co/gZFmwvDw/mochila.jpg',
-      imagenAlt: 'mochila',
+      nombre: 'Carterita Casual',
+      descripcion: 'Cartera compacta con diseño elegante para uso diario.',
+      imagenUrl: 'https://i.ibb.co/JfBkLHp/Cartera.jpg',
+      imagenAlt: 'Carterita casual',
       especificaciones: [
-        'Material: Nylon impermeable de primera calidad.',
-        'Dimensiones: 45cm x 30cm x 15cm.',
-        'Características: Puerto USB de carga (cable no incluido), soporte para botella lateral, espalda ergonómica.',
-        'Detalle: Perfecta para la universidad o viajes cortos.'
+        'Material: Cuero sintético premium.',
+        'Dimensiones: 25cm x 18cm x 7cm.',
+        'Características: Correa ajustable, cierre magnético, bolsillo interno.',
+        'Detalle: Perfecta para salidas o eventos casuales.'
       ]
     },
     {
       id: 3,
-      nombre: 'Mochila con Bolsillo',
-      descripcion: 'Mochila pequeña con bolsillo transparente para diseño personalizado.',
-      imagenUrl: 'https://i.ibb.co/bjJ7s1yy/mochila-bolsillo.jpg',
-      imagenAlt: 'mochila-bolsillo',
+      nombre: 'Cartuchera Transparente',
+      descripcion: 'Cartuchera pequeña con frente transparente para personalizar.',
+      imagenUrl: 'https://i.ibb.co/NnZrvVJY/Cartuchera.jpg',
+      imagenAlt: 'Cartuchera transparente',
       especificaciones: [
-        'Material: Lona resistente y PVC transparente.',
-        'Dimensiones: 30cm x 25cm x 10cm.',
-        'Características: Bolsillo frontal personalizable, correas ajustables y ligeras.',
-        'Detalle: Ideal para llevar tus esenciales con un toque de diseño único.'
+        'Material: PVC y lona resistente.',
+        'Dimensiones: 20cm x 10cm x 6cm.',
+        'Características: Cierre superior, espacio para útiles escolares o cosméticos.',
+        'Detalle: Ideal para colegio o universidad.'
       ]
     },
     {
       id: 4,
-      nombre: 'Cartuchera Doble',
-      descripcion: 'Cartuchera de gran espacio con compartimentos dobles.',
-      imagenUrl: 'https://i.ibb.co/rL73QvX/Cartuchera.jpg',
-      imagenAlt: 'Cartuchera',
+      nombre: 'Chimpunera Escolar',
+      descripcion: 'Cartuchera doble con gran capacidad y diseño resistente.',
+      imagenUrl: 'https://i.ibb.co/XZbVF7DJ/Chimpunera.jpg',
+      imagenAlt: 'Chimpunera escolar',
       especificaciones: [
-        'Material: Poliéster durable.',
-        'Dimensiones: 22cm x 10cm x 7cm.',
-        'Características: Doble cremallera principal, resistente a salpicaduras, fácil de limpiar.',
-        'Detalle: Almacena hasta 50 lápices y marcadores.'
+        'Material: Poliéster duradero.',
+        'Dimensiones: 22cm x 10cm x 8cm.',
+        'Características: Dos compartimentos con cierre, interior forrado.',
+        'Detalle: Capacidad para hasta 60 lápices o marcadores.'
       ]
     },
     {
-      id: 1,
-      nombre: 'Morral Clásico',
-      descripcion: 'Un morral práctico y elegante para el día a día.',
-      imagenUrl: 'https://i.ibb.co/k27ZjThK/morral.jpg',
-      imagenAlt: 'morral',
+      id: 5,
+      nombre: 'Mochila Mickey',
+      descripcion: 'Mochila temática de Mickey Mouse, práctica y moderna.',
+      imagenUrl: 'https://i.ibb.co/1GXNWdZd/Mochila-Mickey.jpg',
+      imagenAlt: 'Mochila Mickey',
       especificaciones: [
-        'Material: Lona de alta resistencia.',
-        'Dimensiones: 35cm x 28cm x 12cm.',
-        'Características: Correa ajustable, dos bolsillos exteriores, compartimento interno acolchado.',
-        'Detalle: Ideal para tablets o libros. Cierre de hebilla de seguridad.'
+        'Material: Lona gruesa estampada.',
+        'Dimensiones: 40cm x 30cm x 15cm.',
+        'Características: Correas ajustables, cierre reforzado, diseño juvenil.',
+        'Detalle: Ideal para niños o fanáticos de Disney.'
       ]
     },
     {
-      id: 2,
-      nombre: 'Mochila Urbana',
-      descripcion: 'Mochila moderna con gran capacidad y diseño minimalista.',
-      imagenUrl: 'https://i.ibb.co/gZFmwvDw/mochila.jpg',
-      imagenAlt: 'mochila',
+      id: 6,
+      nombre: 'Morral Urbano',
+      descripcion: 'Morral moderno con gran capacidad y estilo minimalista.',
+      imagenUrl: 'https://i.ibb.co/V0WNy0tw/Morrak.jpg',
+      imagenAlt: 'Morral urbano',
       especificaciones: [
-        'Material: Nylon impermeable de primera calidad.',
+        'Material: Nylon impermeable premium.',
         'Dimensiones: 45cm x 30cm x 15cm.',
-        'Características: Puerto USB de carga (cable no incluido), soporte para botella lateral, espalda ergonómica.',
-        'Detalle: Perfecta para la universidad o viajes cortos.'
+        'Características: Compartimento para laptop, puerto USB (cable no incluido).',
+        'Detalle: Ideal para trabajo o universidad.'
       ]
     },
     {
-      id: 3,
-      nombre: 'Mochila con Bolsillo',
-      descripcion: 'Mochila pequeña con bolsillo transparente para diseño personalizado.',
-      imagenUrl: 'https://i.ibb.co/bjJ7s1yy/mochila-bolsillo.jpg',
-      imagenAlt: 'mochila-bolsillo',
+      id: 7,
+      nombre: 'Morral Circular',
+      descripcion: 'Bolso redondo con diseño moderno y original.',
+      imagenUrl: 'https://i.ibb.co/LDrZwPzv/Morral-Circular.jpg',
+      imagenAlt: 'Morral circular',
       especificaciones: [
-        'Material: Lona resistente y PVC transparente.',
-        'Dimensiones: 30cm x 25cm x 10cm.',
-        'Características: Bolsillo frontal personalizable, correas ajustables y ligeras.',
-        'Detalle: Ideal para llevar tus esenciales con un toque de diseño único.'
+        'Material: Lona gruesa reforzada.',
+        'Diámetro: 30cm.',
+        'Características: Correa ajustable, cierre de cremallera resistente.',
+        'Detalle: Perfecto para un look urbano y casual.'
       ]
     },
     {
-      id: 4,
-      nombre: 'Cartuchera Doble',
-      descripcion: 'Cartuchera de gran espacio con compartimentos dobles.',
-      imagenUrl: 'https://i.ibb.co/rL73QvX/Cartuchera.jpg',
-      imagenAlt: 'Cartuchera',
+      id: 8,
+      nombre: 'Morral Hechado',
+      descripcion: 'Morral estilo horizontal con correa ancha y diseño moderno.',
+      imagenUrl: 'https://i.ibb.co/ycM4bzLz/Morral-hechado.jpg',
+      imagenAlt: 'Morral hechado',
       especificaciones: [
-        'Material: Poliéster durable.',
-        'Dimensiones: 22cm x 10cm x 7cm.',
-        'Características: Doble cremallera principal, resistente a salpicaduras, fácil de limpiar.',
-        'Detalle: Almacena hasta 50 lápices y marcadores.'
+        'Material: Poliéster y cuero sintético.',
+        'Dimensiones: 35cm x 25cm x 10cm.',
+        'Características: Correa de hombro acolchada, múltiples bolsillos.',
+        'Detalle: Ideal para llevar laptop o cuadernos.'
       ]
     }
   ];
 
-  // Función para abrir el modal, recibe el producto como argumento
   abrirModalEspecificaciones(producto: Producto): void {
     this.productoSeleccionado = producto;
   }
 
-  // Función para cerrar el modal
   cerrarModal(): void {
     this.productoSeleccionado = null;
   }

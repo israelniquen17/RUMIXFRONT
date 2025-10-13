@@ -42,14 +42,12 @@
     box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Imagen de la Card (Ajuste crucial para estabilidad en todos los tamaños) */
 .producto-card img {
     width: 100%;
-    /* Altura fija para la imagen de la tarjeta */
-    height: 200px; 
-    /* Esta propiedad es VITAL para evitar deformaciones */
+    height: 400px; /* antes 200px → ahora más alto */
     object-fit: cover;
 }
+
 
 /* Info del producto */
 .producto-info {
