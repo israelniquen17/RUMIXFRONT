@@ -16,16 +16,16 @@
   }
 }
 
-
-
 /* ========================================================================= */
 /* 2. ESTILOS DE GALERÍA DE PRODUCTOS (IGUAL TAMAÑO) */
 /* ========================================================================= */
 #productos .img-fluid {
     width: 100%;
-    height: 300px;           /* ✅ altura fija */
-    object-fit: cover;       /* ✅ recorta proporcionalmente */
+    height: 600px;                 /* ✅ altura fija */
+    object-fit: cover;             /* ✅ recorta proporcionalmente */
     transition: transform 0.4s ease, filter 0.4s ease;
+    border-radius: 50%;            /* ✅ bordes redondeados */
+    overflow: hidden;              /* ✅ evita que sobresalga el borde */
 }
 
 #productos .img-fluid:hover {
