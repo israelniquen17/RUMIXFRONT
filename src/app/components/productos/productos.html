@@ -35,8 +35,13 @@
             
             <p *ngFor="let spec of productoSeleccionado.especificaciones">{{ spec }}</p>
             
-            <button class="btn-comprar mt-3">Cotizar {{ productoSeleccionado.nombre }}</button>
-          </div>
+<a 
+  class="btn-comprar mt-3" 
+  [href]="'https://wa.me/51905738741?text=Hola,%20estoy%20interesado%20en%20el%20producto%20' + productoSeleccionado.nombre" 
+  target="_blank"
+>
+  💬 Cotizar {{ productoSeleccionado.nombre }}
+</a>          </div>
         </div>
       </div>
     </div>

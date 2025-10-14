@@ -23,106 +23,106 @@ export class ProductosComponent {
   productos: Producto[] = [
     {
       id: 1,
-      nombre: 'Cilindro Deportivo',
-      descripcion: 'Bolso cilíndrico ideal para gimnasio o viajes cortos.',
-      imagenUrl: 'https://i.ibb.co/cn1mBdy/Barril.jpg',
+      nombre: 'Cilindro',
+      descripcion: 'Bolso cilíndrico',
+      imagenUrl: 'https://i.ibb.co/r2DvY1hr/Cilindro.png',
       imagenAlt: 'Cilindro deportivo',
       especificaciones: [
-        'Material: Lona impermeable reforzada.',
-        'Dimensiones: 45cm x 25cm x 25cm.',
-        'Características: Correa ajustable, bolsillo lateral con cierre, base antideslizante.',
-        'Detalle: Ideal para ropa deportiva o accesorios de entrenamiento.'
+        'Tela:Tetron + Oxford (Dibujo a full color).',
+        'Dimensiones: 21 cm alto x 26 cm ancho x 20 de circunferencia.',
+        'Características: Cinta de mano para fácil transporte y cierre superior.',
+        'Detalle: Diseño de su preferencia (deportes, logos, nombres, etc.).'
       ]
     },
     {
       id: 2,
       nombre: 'Carterita Casual',
-      descripcion: 'Cartera compacta con diseño elegante para uso diario.',
-      imagenUrl: 'https://i.ibb.co/JfBkLHp/Cartera.jpg',
+      descripcion: 'Carterita de mano con diseño elegante y moderno.',
+      imagenUrl: 'https://i.ibb.co/WWKgfx53/Cartera.png',
       imagenAlt: 'Carterita casual',
       especificaciones: [
-        'Material: Cuero sintético premium.',
-        'Dimensiones: 25cm x 18cm x 7cm.',
-        'Características: Correa ajustable, cierre magnético, bolsillo interno.',
-        'Detalle: Perfecta para salidas o eventos casuales.'
+        'Tela:Tetron + Oxford (Dibujo a full color). ',
+        'Dimensiones: 16cm de alto  x 24 cm de ancho',
+        'Características:Dos asas de mano, cierre superior, acabado reforzado.',
+        'Detalle: Diseño de su preferencia (deportes, logos, nombres, etc.).'
       ]
     },
     {
       id: 3,
-      nombre: 'Cartuchera Transparente',
-      descripcion: 'Cartuchera pequeña con frente transparente para personalizar.',
-      imagenUrl: 'https://i.ibb.co/NnZrvVJY/Cartuchera.jpg',
+      nombre: 'Cartuchera ',
+      descripcion: 'Cartuchera resistente y práctica para útiles o lo que necesites.',
+      imagenUrl: 'https://i.ibb.co/jvBrVWrz/Cartuchera.png',
       imagenAlt: 'Cartuchera transparente',
       especificaciones: [
-        'Material: PVC y lona resistente.',
-        'Dimensiones: 20cm x 10cm x 6cm.',
-        'Características: Cierre superior, espacio para útiles escolares o cosméticos.',
-        'Detalle: Ideal para colegio o universidad.'
+        'Tela:Tetron + Oxford (Dibujo a full color). ',
+        'Dimensiones: 15 cm de alto x 23 cm de ancho',
+        'Características: Cierre superior y asa de mano para fácil transporte.',
+        'Detalle: Diseño de su preferencia (deportes, logos, nombres, etc.).'
       ]
     },
     {
       id: 4,
-      nombre: 'Chimpunera Escolar',
-      descripcion: 'Cartuchera doble con gran capacidad y diseño resistente.',
-      imagenUrl: 'https://i.ibb.co/XZbVF7DJ/Chimpunera.jpg',
-      imagenAlt: 'Chimpunera escolar',
+      nombre: 'Chimpunera',
+      descripcion: 'Chimpunera espaciosa resistente y con diseño moderno.',
+      imagenUrl: 'https://i.ibb.co/xSvhPWg2/Chimpunera.png',
+      imagenAlt: 'Chimpunera',
       especificaciones: [
-        'Material: Poliéster duradero.',
-        'Dimensiones: 22cm x 10cm x 8cm.',
-        'Características: Dos compartimentos con cierre, interior forrado.',
-        'Detalle: Capacidad para hasta 60 lápices o marcadores.'
+        'Tela:Tetron + Oxford (Dibujo a full color). ',
+        'Dimensiones: 28cm de alto x 16 cm de ancho',
+        'Características: Cierre superior, asa de mano reforzada.',
+        'Detalle: Diseño de su preferencia (deportes, logos, nombres, etc.).'
       ]
     },
     {
       id: 5,
-      nombre: 'Mochila Mickey',
-      descripcion: 'Mochila temática de Mickey Mouse, práctica y moderna.',
-      imagenUrl: 'https://i.ibb.co/1GXNWdZd/Mochila-Mickey.jpg',
+      nombre: 'Mochila',
+      descripcion: 'Mochilita juvenil con diseño divertido y funcional.',
+      imagenUrl: 'https://i.ibb.co/5hsxbkRB/Mochila.png',
       imagenAlt: 'Mochila Mickey',
       especificaciones: [
-        'Material: Lona gruesa estampada.',
-        'Dimensiones: 40cm x 30cm x 15cm.',
-        'Características: Correas ajustables, cierre reforzado, diseño juvenil.',
-        'Detalle: Ideal para niños o fanáticos de Disney.'
+        'Tela:Tetron + Oxford (Dibujo a full color). ',
+        'Dimensiones: 25 cm alto x 20.5 cm ancho',
+        'Características: Cintas, cierre reforzado, diseño juvenil.',
+      'Detalle: Diseño de su preferencia (deportes, logos, nombres, etc.).'
       ]
     },
     {
       id: 6,
       nombre: 'Morral Urbano',
-      descripcion: 'Morral moderno con gran capacidad y estilo minimalista.',
-      imagenUrl: 'https://i.ibb.co/V0WNy0tw/Morrak.jpg',
+      descripcion: 'Morral moderno con gran capacidad y estilo.',
+      imagenUrl: 'https://i.ibb.co/5xWX3RYf/Morral.png',
       imagenAlt: 'Morral urbano',
       especificaciones: [
-        'Material: Nylon impermeable premium.',
-        'Dimensiones: 45cm x 30cm x 15cm.',
-        'Características: Compartimento para laptop, puerto USB (cable no incluido).',
-        'Detalle: Ideal para trabajo o universidad.'
+        'Tela:Tetron + Oxford (Dibujo a full color).',
+        'Dimensiones: 24.5 cm de alto x 20cm de ancho',
+        'Características: Correa ajustable , cierre superior , siempre reforzado.',
+       'Detalle: Diseño de su preferencia (deportes, logos, nombres, etc.).'
       ]
     },
     {
       id: 7,
       nombre: 'Morral Circular',
       descripcion: 'Bolso redondo con diseño moderno y original.',
-      imagenUrl: 'https://i.ibb.co/LDrZwPzv/Morral-Circular.jpg',
+      imagenUrl: 'https://i.ibb.co/Q7MWQ7Pj/Morral-Circular.png',
       imagenAlt: 'Morral circular',
       especificaciones: [
-        'Material: Lona gruesa reforzada.',
-        'Diámetro: 30cm.',
-        'Características: Correa ajustable, cierre de cremallera resistente.',
-        'Detalle: Perfecto para un look urbano y casual.'
+        'Tela:Tetron + Oxford (Dibujo a full color). ',
+        'Diámetro: 54 cm.',
+        'Características: Correa ajustable, cierre  resistente.',
+        'Detalle: Diseño de su preferencia (deportes, logos, nombres, etc.).'
       ]
     },
     {
       id: 8,
       nombre: 'Morral Hechado',
       descripcion: 'Morral estilo horizontal con correa ancha y diseño moderno.',
-      imagenUrl: 'https://i.ibb.co/ycM4bzLz/Morral-hechado.jpg',
+      imagenUrl: 'https://i.ibb.co/3y5g0G9B/Morral-hechado.png',
       imagenAlt: 'Morral hechado',
       especificaciones: [
-        'Material: Poliéster y cuero sintético.',
-        'Dimensiones: 35cm x 25cm x 10cm.',
-        'Características: Correa de hombro acolchada, múltiples bolsillos.',
-        'Detalle: Ideal para llevar laptop o cuadernos.'
+        'Tela:Tetron + Oxford (Dibujo a full color). ',
+        'Dimensiones: 20 cm de alto x 25 cm de ancho',
+        'Características: Correa ajustable con cierre superior reforzado.',
+        'Detalle: Diseño de su preferencia (deportes, logos, nombres, etc.).'
       ]
     }
   ];
